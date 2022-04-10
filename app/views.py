@@ -13,6 +13,6 @@ def new(request,file_name,chat_id,message_id):
      return Response({"status":":)"},status=status.HTTP_201_CREATED)
 class Search(APIView):
      def get(self,request,file_name):
-          data=Info.objects.filter(file_name=file_name)
-          serializer=InfoSerializer(data)
+          malumot=Info.objects.filter(file_name=file_name)
+          serializer=InfoSerializer(malumot)
           return Response(serializer.data,status=status.HTTP_200_OK)
